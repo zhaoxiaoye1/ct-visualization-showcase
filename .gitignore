@@ -1,0 +1,7 @@
+__pycache__/
+*.csv
+*.npy
+*.npz
+*.tif
+*.tiff
+*.json
