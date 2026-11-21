@@ -2,16 +2,18 @@
 
 [打开作品展示 / View showcase](https://zhaoxiaoye1.github.io/ct-visualization-showcase/)
 
-围绕沉积物微观结构研究，展示颗粒分割、局部邻居网络和 DVC 辅助运动核查的可视化工作。
+围绕沉积物微观结构研究，将三维 CT、颗粒分割和 DVC 位移信息整理为直观的对照与核查视图。
 
-- **分割**：二值掩码与颗粒实例分割的 5 × 5 画面对照。
-- **局部连接**：192³ 子区域的整体网络与单颗粒邻居。
-- **运动核查**：抽样颗粒表面、质心运动与局部预测/观测对照。
+- **颗粒分割**：在五个压缩阶段、五个相对高度切换查看二值掩码与颗粒实例。
+- **局部连接**：观察 192³ 子区域的整体网络，以及中心颗粒和周围邻居。
+- **运动核查**：结合抽样颗粒表面与质心，比较 DVC 位移预测和后续扫描观测。
 
-本仓库只包含展示页面和精选栅格画面。三维演示以动画播放，不能提取或交互查询科研对象。原始 CT、分割标签数组、颗粒编号、坐标、网格、测量表、完整追踪结果及定量结论均未提供。动画中间帧为插值演示，不是额外的 CT 实测时刻，样例也不代表整体准确率或最终地质结论。
+页面支持中英文切换、处理前后对照和独立动画演示。动画中间帧采用位置或位移插值，颜色用于区分当前画面中的颗粒实例。
 
-The repository contains presentation code and selected raster visuals only. It does not distribute CT volumes, segmentation arrays, particle IDs, coordinates, meshes, measurements, tracking tables, or quantitative findings. Intermediate animation frames are interpolated for visualization, not additional CT observations.
+## Research workflow
+
+This work explores sediment microstructure through particle segmentation, local contact networks and DVC-assisted motion inspection. The showcase combines five-stage image comparisons, a 192³ neighborhood view and animated comparisons of displacement predictions with subsequent scan observations.
+
+The presentation supports Chinese and English, before-and-after views and standalone animations. Intermediate frames use position or displacement interpolation; instance colors distinguish particles within each image.
 
 [已发表论文 / Published paper](https://doi.org/10.1016/j.aiig.2026.100273)
-
-在研材料的版权保留。Published research visuals are not licensed for dataset reuse. UI source code may be read to understand the presentation implementation; no scientific processing pipeline is distributed here.
