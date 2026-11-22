@@ -9,3 +9,6 @@ document.querySelectorAll('[data-animation]').forEach(b=>{b.onclick=()=>{const i
 render();
 
 document.querySelectorAll('[data-slice-alt]').forEach(img=>img.alt=tr(img.dataset.sliceAlt));
+
+const stageGroup=document.querySelector('.stage-images');
+if(stageGroup){Promise.all(Array.from(stageGroup.querySelectorAll('img')).map(img=>img.decode())).then(()=>{stageGroup.dataset.ready='true'}).catch(()=>{stageGroup.dataset.ready='true'});}
